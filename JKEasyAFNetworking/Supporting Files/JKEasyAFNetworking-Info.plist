@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>APIVersion</key>
+	<string></string>
+	<key>AppSecret</key>
+	<string></string>
+	<key>Authorization</key>
+	<string></string>
+	<key>BaseURL</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -9,30 +17,11 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>JK.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>JK.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
-	<key>BaseURL</key>
-	<string></string>
-	<key>HMACHeaders</key>
-	<array>
-		<string>X-PUBLIC</string>
-		<string>X-HASH</string>
-		<string>X-NONCE</string>
-		<string>X-MICROTIME</string>
-	</array>
-	<key>APIVersion</key>
-	<string></string>
-	<key>Authorization</key>
-	<string></string>
-	<key>TimeoutPeriod</key>
-	<string></string>
-	<key>AppSecret</key>
-	<string></string>
-	<key>PublicKey</key>
-	<string></string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -41,8 +30,19 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>HMACHeaders</key>
+	<array>
+		<string>X-PUBLIC</string>
+		<string>X-HASH</string>
+		<string>X-NONCE</string>
+		<string>X-MICROTIME</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>PublicKey</key>
+	<string></string>
+	<key>TimeoutPeriod</key>
+	<string></string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>JKEasyAFNetworkingStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>

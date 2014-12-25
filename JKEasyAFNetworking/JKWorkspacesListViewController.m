@@ -42,6 +42,7 @@
     self.headerLabel.text = self.topLabelTitle;
     self.editWorkspacesButton.hidden = self.isReading;
     [self getDataAndReloadTable];
+    self.currentWorkspaceName = [JKUserDefaultsOperations getObjectFromDefaultForKey:@"defaultWorkspace"];
 }
 
 -(void)addBorderToView:(UIView*)viewToAddBorderTo {
@@ -72,11 +73,16 @@
         workSpaceNameLabel.textAlignment = NSTextAlignmentCenter;
         workSpaceNameLabel.textColor = [UIColor blackColor];
         workSpaceNameLabel.tag = 13;
+        
         [currentCell addSubview:workSpaceNameLabel];
     }
     JKNetworkingWorkspace* currentWorkSpace = self.workSpaceList[indexPath.row];
     UILabel* workSpaceNameLabel = (UILabel*)[currentCell viewWithTag:13];
     workSpaceNameLabel.text = [NSString stringWithFormat:@"%@     %@",currentWorkSpace.workSpaceIdentifier, currentWorkSpace.workSpaceName];
+    if([self.currentWorkspaceName isEqualToString:currentWorkSpace.workSpaceName]) {
+        [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    }
+    
     return currentCell;
 }
 

@@ -70,7 +70,7 @@
     if([JKUserDefaultsOperations getObjectFromDefaultForKey:@"maxHistory"]) {
         
         NSInteger maximumNumberOfRequestsToShow = [[JKUserDefaultsOperations getObjectFromDefaultForKey:@"maxHistory"] integerValue];
-        self.maximumNumberOfHistoryItemsField.text= [NSString stringWithFormat:@"%d",maximumNumberOfRequestsToShow];
+        self.maximumNumberOfHistoryItemsField.text= [NSString stringWithFormat:@"%ld",(long)maximumNumberOfRequestsToShow];
     }
     
 }

@@ -167,7 +167,7 @@
     
     [newAPIRequest
         communicateWithServerWithMethod:self.requestType.selectedSegmentIndex
-        andHeaderFields:(NSDictionary*)mutableHeaderFields
+        andHeaderFields:mutableHeaderFields
         andPathToAPI:self.inputURLField.text
         andParameters:inputGETParameters
         completion:^(id successResponse) {

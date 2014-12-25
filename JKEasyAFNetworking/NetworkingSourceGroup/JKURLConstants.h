@@ -9,11 +9,9 @@
 #import <Foundation/Foundation.h>
 
 #define DAFAULT_WORKSPACE_NAME @"default"
-#warning Keep Base URL, URL extension, authorization token and Timeout interval etc. parameters in this file \
-They are kept blank for reason.
+#warning authorization token and Timeout interval etc. parameters in this file They are kept blank for reason.
 
-//Can be provided through interface
-
+//Can be provided through other interface such as .plist file
 
 @interface JKURLConstants : NSObject
 
